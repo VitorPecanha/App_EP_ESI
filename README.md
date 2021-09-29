@@ -6,5 +6,10 @@ Travis: [![Build Status](https://app.travis-ci.com/VitorPecanha/App_EP_ESI.svg?b
 
 Code Climate: [![Maintainability](https://api.codeclimate.com/v1/badges/700bd8ad1c00fa24b718/maintainability)](https://codeclimate.com/github/VitorPecanha/App_EP_ESI/maintainability)
 
-
 Link da apĺicação no Heroku: https://epesi.herokuapp.com/
+
+Integrantes:
+
+Vitor Contieri Rezende Peçanha, número USP 10387706
+
+Projeto que visa auxiliar o usuário a manter uma horta caseira.
