@@ -11,6 +11,9 @@ Link da apĺicação no Heroku: https://epesi.herokuapp.com/
 Integrantes:
 
 Vitor Contieri Rezende Peçanha - 10387706
+
 Leandro Rodrigues de Godoy Chacur - 11270872
+
+Claudia Alissa Kimura - 10284761
 
 Projeto que visa auxiliar o usuário a manter uma horta caseira.
