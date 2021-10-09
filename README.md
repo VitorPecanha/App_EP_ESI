@@ -16,4 +16,6 @@ Leandro Rodrigues de Godoy Chacur - 11270872
 
 Claudia Alissa Kimura - 10284761
 
+Laerte Vidal Junior - 7557800
+
 Projeto que visa auxiliar o usuário a manter uma horta caseira.
