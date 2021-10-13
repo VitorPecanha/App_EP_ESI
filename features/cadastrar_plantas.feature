@@ -1,3 +1,5 @@
+#language: pt
+
 Funcionalidade: Cadastrar uma planta
 Como usuário
 Para realizar o acompanhamento dela
