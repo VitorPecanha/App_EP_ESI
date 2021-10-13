@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plant:</strong>
+  <%= @plant.plant_id %>
+</p>
+<br/><br/>
+<p>
+  <strong>Plant name:</strong>
+  <%= @plant.plant_name %>
+</p>
+
+<p>
+  <strong>Water hour interval:</strong>
+  <%= @plant.water_hour_interval %>
+</p>
+
+<p>
+  <strong>Fertilizer hour interval:</strong>
+  <%= @plant.fertilizer_hour_interval %>
+</p>
+
+<p>
+  <strong>Prunning:</strong>
+  <%= @plant.prunning %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>
