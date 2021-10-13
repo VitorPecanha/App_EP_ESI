@@ -6,14 +6,9 @@ require "active_support/core_ext/integer/time"
 # and recreated between test runs. Don't rely on the data there!
 
 Rails.application.configure do
-  # Configure 'rails notes' to inspect Cucumber files
-  config.annotations.register_directories('features')
-  config.annotations.register_extensions('feature') { |tag| /#\s*(#{tag}):?\s*(.*)$/ }
-
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.cache_classes = false
-  config.action_view.cache_template_loading = true
+  config.cache_classes = true
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
