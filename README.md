@@ -18,4 +18,9 @@ Claudia Alissa Kimura - 10284761
 
 Laerte Vidal Junior - 7557800
 
+#Planta a planta
+
 Projeto que visa auxiliar o usuário a manter uma horta caseira.
+Nesse sistema o usuário poderá cadastrar plantas que ele deseja monitorar. 
+O Planta a planta irá emitir avisos de quando será necessário regar, adubar, podar, e realizar diversas outras atividades na planta.
+Além disso, o sistema contará com pequenos vídeos explicativos de como realizar tais atividades.
