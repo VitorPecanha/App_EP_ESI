@@ -8,23 +8,25 @@ RSpec.describe "AddingPlants", type: :system do
   pending "add some scenarios (or delete) #{__FILE__}"
 
   it 'lets the user register a new plant' do
-    visit '/plants/new'
+    visit '/plants'
 
-    expect(page).to have_content('New Plant')
+    expect(page).to have_content('Lista de Plantas')
 
-    fill_in 'Plant', with: '1'
-    fill_in 'Plant name', with: 'Cacto'
-    fill_in 'Water hour interval', with: '72'
-    fill_in 'Fertilizer hour interval', with: '720'
+    click_on 'Cadastrar Planta'
 
-    click_on 'Create Plant'
+    fill_in 'plant_plant_id', with: '1'
+    fill_in 'plant_plant_name', with: 'Cacto'
+    fill_in 'plant_water_hour_interval', with: '72'
+    fill_in 'plant_fertilizer_hour_interval', with: '720'
+
+    click_on 'Cadastrar'
 
 
-    expect(page).to have_content('Plant: 1')
-    expect(page).to have_content('Plant name: Cacto')
-    expect(page).to have_content('Water hour interval: 72')
-    expect(page).to have_content('Fertilizer hour interval: 720')
-    expect(page).to have_content('Prunning: false')
+    expect(page).to have_content('Id: 1')
+    expect(page).to have_content('Nome: Cacto')
+    expect(page).to have_content('Intervalo de rega em horas: 72')
+    expect(page).to have_content('Intervalo de fertilização em horas: 720')
+    expect(page).to have_content('Necessita de Poda: false')
   end
 
 end
