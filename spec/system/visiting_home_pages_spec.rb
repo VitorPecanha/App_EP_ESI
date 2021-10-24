@@ -10,8 +10,8 @@ RSpec.describe "VisitingHomePages", type: :system do
   it 'allows the user Admin to visit his homepage' do
     visit '/admhome'
 
-    expect(page).to have_content('Home')
-    expect(page).to have_content('Plant List')
+    expect(page).to have_content('Planta Planta!')
+    expect(page).to have_content('Cadastrar Planta')
 
   end
 
