@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Plants</h1>
+<h1>Lista de Plantas</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Plant</th>
-      <th>Plant name</th>
-      <th>Water hour interval</th>
-      <th>Fertilizer hour interval</th>
-      <th>Prunning</th>
-      <th colspan="3"></th>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Intervalo de rega (em horas)</th>
+      <th>Intervalo de fertilização (em horas)</th>
+      <th>Requer Poda</th>
     </tr>
   </thead>
 
@@ -24,7 +23,7 @@
         <td><%= plant.prunning %></td>
         <td><%= link_to 'Show', plant %></td>
         <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Plant', new_plant_path %>
+<%= link_to 'Cadastrar Planta', new_plant_path %>
