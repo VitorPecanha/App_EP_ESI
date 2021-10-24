@@ -21,9 +21,9 @@
         <td><%= plant.water_hour_interval %></td>
         <td><%= plant.fertilizer_hour_interval %></td>
         <td><%= plant.prunning %></td>
-        <td><%= link_to 'Show', plant %></td>
-        <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } %></td>
+        <td><%= link_to 'Visualizar', plant %></td>
+        <td><%= link_to 'Editar', edit_plant_path(plant) %></td>
+        <td><%= link_to 'Deletar', plant, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
