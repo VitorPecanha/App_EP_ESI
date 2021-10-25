@@ -13,4 +13,10 @@ exclude_sparherns:
   - ".nyc_output"
   - "coverage"
   - "./*.test.js"
-  - "./*.config.js"
+
+exclude_patterns:
+  - "public/"
+  - "app/assets/"
+  - "db/migrate/"
+  - "doc/js/"
+  - "babel.config.js"
