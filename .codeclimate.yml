@@ -4,3 +4,7 @@ exclude_patterns:
   - "db/migrate/"
   - "doc/js/"
   - "babel.config.js"
+  - "node_modules/"
+  - ".nyc_output"
+  - "coverage"
+  - "./*.test.js"
