@@ -13,4 +13,4 @@ exclude_sparherns:
   - ".nyc_output"
   - "coverage"
   - "./*.test.js"
-  - "babel.config.js"
+  - "./*.config.js"
