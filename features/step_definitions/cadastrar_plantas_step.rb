@@ -1,9 +1,9 @@
 Dado('que estou na página de cadastro de planta') do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit 'plants/new'
 end
   
 Quando('preencho o campo {string} com {string}') do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+    fill_in string, :with => string2 
 end
   
 Quando('clico em salvar') do
