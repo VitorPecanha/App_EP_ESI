@@ -7,11 +7,15 @@ Quando('preencho o campo {string} com {string}') do |string, string2|
 end
   
 Quando('clico em salvar') do
-    pending # Write code here that turns the phrase above into concrete actions
+    click_on 'Cadastrar'
 end
   
 Então('ela deve ser salvo no banco de dados do usuário') do
-    pending # Write code here that turns the phrase above into concrete actions
+    plant = Plant.order("id").last
+    expect(plant.plant_id).to eq(1)
+    expect(plant.plant_name).to eq("Alface")
+    expect(plant.water_hour_interval).to eq(24)
+    expect(plant.fertilizer_hour_interval).to eq(72)  
 end
   
 Então('deverei ver ela nas minhas plantas cadastradas') do
