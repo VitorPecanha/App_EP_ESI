@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require 'rails_helper'
 
 RSpec.describe "AddingPlants", type: :system do
@@ -31,7 +30,7 @@ RSpec.describe "AddingPlants", type: :system do
   end
 
 end
-=======
+
 require 'rails_helper'
 
 RSpec.describe "AddingPlants", type: :system do
@@ -64,4 +63,4 @@ RSpec.describe "AddingPlants", type: :system do
   end
 
 end
->>>>>>> 78114e684a952b40042d2f2baa51365c38a191fb
+
