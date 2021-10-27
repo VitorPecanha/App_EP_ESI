@@ -19,14 +19,16 @@ Então('ela deve ser salvo no banco de dados do usuário') do
 end
   
 Então('deverei ver ela nas minhas plantas cadastradas') do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to  have_content(1)
+    expect(page).to  have_content("Alface")
+    expect(page).to  have_content(24)
+    expect(page).to  have_content(72)
 end
   
 Quando('deixo o campo {string} vazio') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    fill_in string, :with => ""
 end
   
 Então('deverei receber a mensagem de erro {string}') do |string|
     pending # Write code here that turns the phrase above into concrete actions
 end
-  
