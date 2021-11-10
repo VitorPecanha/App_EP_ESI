@@ -1,14 +1,9 @@
-engines:
-  duplication:
-    enabled: false
-    config:
-      languages: -javascript
-  eslint:
-    enabled: true
-    checks:
-      similar-code:
-        enabled: false
-exclude_sparherns:
+exclude_patterns:
+  - "public/"
+  - "app/assets/"
+  - "db/migrate/"
+  - "doc/js/"
+  - "babel.config.js"
   - "node_modules/"
   - ".nyc_output"
   - "coverage"
