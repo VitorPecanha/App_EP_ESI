@@ -11,7 +11,8 @@ RSpec.describe "VisitingHomePages", type: :system do
     visit '/home/admin'
 
     expect(page).to have_content('Planta Planta!')
-    expect(page).to have_content('Listar Plantas')
+    expect(page).to have_content('Plantas')
+    expect(page).to have_content('Usuários')
     expect(page).to have_content('Bem-vindo, usuário!')
 
   end
