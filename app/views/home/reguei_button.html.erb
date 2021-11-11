@@ -1,0 +1,14 @@
+<button onclick="dataRega()">Reguei Todos</button>
+
+<p id="demo"></p>
+
+<script>
+function dataRega() {
+    var str = <%= registro_da_rega_total %>
+    <%=# "#{registro_da_rega_total}" %>
+
+    document.getElementById("demo").innerHTML = str;
+}
+    
+</script>
+
