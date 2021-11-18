@@ -14,8 +14,6 @@
 
 RSpec.describe "/plants", type: :request do
   
-  # Plant. As you add validations to Plant, be sure to
-  # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
   }
