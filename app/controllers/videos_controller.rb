@@ -1,11 +1,15 @@
 class VideosController < ApplicationController
   def new
+    @video = Video.new
   end
 
   def create
     @video = Video.new(video_params)
-    @video.save
-    redirect_to @video
+    if @video.save
+      redirect_to @video
+    else
+      render 'new'
+    end
   end
 
   private
