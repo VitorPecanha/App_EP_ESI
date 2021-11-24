@@ -17,7 +17,7 @@ Funcionalidade: Cadastrar videos
 
   Cenário: Cadastro de vídeo com erro - sem nome da planta
     Dado que estou na página de cadastro de videos
-    Quando preencho o campo "nome_da_planta" com ""
+    Quando deixo o campo "nome_da_planta" vazio
     Quando preencho o campo "nome_do_video" com "Germinação de semente de maçã"
     Quando preencho o campo "provedor" com "Youtube"
     Quando preencho o campo "link" com "https://www.youtube.com/watch?v=aQJWZVks1ec"
@@ -27,7 +27,7 @@ Funcionalidade: Cadastrar videos
   Cenário: Cadastro de vídeo com erro - sem nome do vídeo
     Dado que estou na página de cadastro de videos
     Quando preencho o campo "nome_da_planta" com "Maçã"
-    Quando preencho o campo "nome_do_video" com ""
+    Quando deixo o campo "nome_do_video" vazio
     Quando preencho o campo "provedor" com "Youtube"
     Quando preencho o campo "link" com "https://www.youtube.com/watch?v=aQJWZVks1ec"
     E clico em salvar
@@ -37,7 +37,7 @@ Funcionalidade: Cadastrar videos
     Dado que estou na página de cadastro de videos
     Quando preencho o campo "nome_da_planta" com "Maçã"
     Quando preencho o campo "nome_do_video" com "Germinação de semente de maçã"
-    Quando preencho o campo "provedor" com ""
+    Quando deixo o campo "provedor" vazio
     Quando preencho o campo "link" com "https://www.youtube.com/watch?v=aQJWZVks1ec"
     E clico em salvar
     Então deverei receber a mensagem de erro "É obrigatório informar o nome do provedor"
@@ -47,6 +47,6 @@ Funcionalidade: Cadastrar videos
     Quando preencho o campo "nome_da_planta" com "Maçã"
     Quando preencho o campo "nome_do_video" com "Germinação de semente de maçã"
     Quando preencho o campo "provedor" com "Youtube"
-    Quando preencho o campo "link" com ""
+    Quando deixo o campo "link" vazio
     E clico em salvar
     Então deverei receber a mensagem de erro "É obrigatório informar o link do vídeo"

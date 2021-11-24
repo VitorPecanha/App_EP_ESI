@@ -1,5 +1,11 @@
 require 'rails_helper'
-
+require 'spec_helper'
 RSpec.describe Video, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'invalido sem nome da planta' do
+    video = Video.new
+    video.nome_do_video = "nome video"
+    video.provedor = "provedor"
+    video.link = "http://www.site.com.br"
+    expect(video).not_be be_valid
+  end
 end

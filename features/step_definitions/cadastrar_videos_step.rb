@@ -24,3 +24,11 @@ Então('deverei ver ele na página de listagem de videos') do
   expect(page).to have_content('Youtube')
   expect(page).to have_content('https://www.youtube.com/watch?v=aQJWZVks1ec')
 end
+
+Quando('deixo o campo {string} vazio') do |string|
+  fill_in string, :with => ""
+end
+
+Então('deverei receber a mensagem de erro {string}') do |string|
+
+end
