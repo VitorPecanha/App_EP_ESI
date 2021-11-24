@@ -17,3 +17,10 @@ Então('ele deve ser salvo no banco de dados de vídeos') do
   expect(video.provedor).to eq("Youtube")
   expect(video.link).to eq("https://www.youtube.com/watch?v=aQJWZVks1ec")
 end
+
+Então('deverei ver ele na página de listagem de videos') do
+  expect(page)to have_content('Maçã')
+  expect(page)to have_content('Germinação de semente de maçã')
+  expect(page)to have_content('Youtube')
+  expect(page)to have_content('https://www.youtube.com/watch?v=aQJWZVks1ec')
+end

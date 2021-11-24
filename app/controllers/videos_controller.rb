@@ -5,6 +5,7 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
     @video.save
+    redirect_to @video
   end
 
   private
@@ -12,4 +13,7 @@ class VideosController < ApplicationController
     params.require(:video).permit(:nome_da_planta, :nome_do_video, :provedor, :link)
   end
 
+  def show
+    @video = Video.find(params[:id])
+  end
 end
