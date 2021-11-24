@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :plants
+  resources :videos
   get 'home/admin'
   root 'home#admin'
   #get 'home/index'
