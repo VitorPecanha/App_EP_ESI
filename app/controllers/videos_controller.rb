@@ -1,4 +1,14 @@
 class VideosController < ApplicationController
+  before_action :set_user, only: %i[ show edit update destroy ]
+
+  def index
+    @video = Video.all
+  end
+
+  def show
+
+  end
+
   def new
     @video = Video.new
   end
