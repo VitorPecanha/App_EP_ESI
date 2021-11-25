@@ -30,5 +30,5 @@ Quando('deixo o campo {string} vazio') do |string|
 end
 
 Então('deverei receber a mensagem de erro {string}') do |string|
-
+  expect(page).to have_content(string)
 end
