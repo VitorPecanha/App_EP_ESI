@@ -472,9 +472,26 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/home/vitor/Documents/Projetos/USP/8Semestre/ESI/EP_ESI/App_Ep_ESI/app/models/video.rb": [
+        1,
+        1,
         1,
         1,
         1,
@@ -1192,6 +1209,6 @@
         null
       ]
     },
-    "timestamp": 1637799409
+    "timestamp": 1637799787
   }
 }

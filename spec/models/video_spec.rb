@@ -18,4 +18,19 @@ RSpec.describe Video, type: :model do
     expect(video).not_to be_valid
   end
 
+  it 'invalido sem provedor' do
+    video = Video.new
+    video.nome_da_planta = "planta"
+    video.nome_do_video = "video"
+    video.link = "link"
+    expect(video).not_to be_valid
+  end
+
+  it 'invalido sem link' do
+    video = Video.new
+    video.nome_da_planta = "planta"
+    video.nome_do_video = "video"
+    video.provedor = "provedor"
+    expect(video).not_to be_valid
+  end
 end
