@@ -9,4 +9,13 @@ RSpec.describe Video, type: :model do
     video.link = "http://www.site.com.br"
     expect(video).not_to be_valid
   end
+
+  it 'invalido sem nome do video' do
+    video = Video.new
+    video.nome_da_planta = "planta"
+    video.provedor = "provedor"
+    video.link = "link"
+    expect(video).not_to be_valid
+  end
+  
 end
