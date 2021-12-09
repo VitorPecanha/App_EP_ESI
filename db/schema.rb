@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_12_09_053410) do
 
   create_table "passwords", force: :cascade do |t|
@@ -57,12 +56,9 @@ ActiveRecord::Schema.define(version: 2021_12_09_053410) do
     t.string "user_cpf"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
     t.string "password"
-=======
     t.string "user_email"
     t.index ["user_email"], name: "index_users_on_user_email", unique: true
->>>>>>> fadd59529c3948b7df584dde78309f94c121a953
   end
 
   create_table "videos", force: :cascade do |t|
