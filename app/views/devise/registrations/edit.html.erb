@@ -11,6 +11,7 @@
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Aguardando confirmação: <%= resource.unconfirmed_email %></div>
   <% end %>
+  <br>
 
   <div class="field">
     <%= f.label :nova_senha %> <i>(deixar em branco caso não queira alterar)</i><br />
@@ -20,25 +21,24 @@
       <em><%= @minimum_password_length %> caracteres ou mais</em>
     <% end %>
   </div>
-
+<br>
   <div class="field">
     <%= f.label :confirmar_nova_senha %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-
+<br>
   <div class="field">
     <%= f.label :senha_atual %><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Atualizar" %>
+  <br>
+    <%= f.submit "Atualizar", class:"btn btn-primary" %>
   </div>
 <% end %>
-<br><br><br><br><br><br>
+<br><br><br><br>
 
 <h3>Excluir minha conta</h3>
 
-<p><%= button_to "Deletar minha conta", registration_path(resource_name), data: { confirm: "Tem certeza que deseja excluir? Essa ação não é reversível." }, method: :delete %></p>
-
-<%= link_to "Voltar", :back %>
+<p><%= button_to "Deletar minha conta", registration_path(resource_name), data: { confirm: "Tem certeza que deseja excluir? Essa ação não é reversível." }, method: :delete, class:"btn btn-danger" %></p>
