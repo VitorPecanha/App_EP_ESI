@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_230604) do
+ActiveRecord::Schema.define(version: 2021_12_09_053410) do
+
+  create_table "passwords", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "plants", force: :cascade do |t|
     t.integer "plant_id"
@@ -20,6 +25,29 @@ ActiveRecord::Schema.define(version: 2021_11_24_230604) do
     t.boolean "prunning"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_session_id"
+    t.index ["user_session_id"], name: "index_plants_on_user_session_id"
+  end
+
+  create_table "plants_user_sessions", force: :cascade do |t|
+    t.integer "user_session_id", null: false
+    t.integer "plant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plant_id"], name: "index_plants_user_sessions_on_plant_id"
+    t.index ["user_session_id"], name: "index_plants_user_sessions_on_user_session_id"
+  end
+
+  create_table "user_sessions", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_user_sessions_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_user_sessions_on_reset_password_token", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -29,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_230604) do
     t.string "user_cpf"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password"
   end
 
   create_table "videos", force: :cascade do |t|
@@ -40,4 +69,6 @@ ActiveRecord::Schema.define(version: 2021_11_24_230604) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "plants_user_sessions", "plants"
+  add_foreign_key "plants_user_sessions", "user_sessions"
 end

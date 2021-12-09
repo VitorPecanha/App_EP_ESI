@@ -34,5 +34,8 @@ module TudoMuda
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.I18n.available_locales = [:pt, :en]
+    config.I18n.default_locale = :pt
   end
 end

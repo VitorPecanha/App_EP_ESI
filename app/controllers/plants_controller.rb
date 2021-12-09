@@ -1,6 +1,10 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: %i[ show edit update destroy ]
 
+
+  before_action :authenticate_user_session!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+
   # GET /plants or /plants.json
   def index
     @plants = Plant.all
@@ -12,7 +16,8 @@ class PlantsController < ApplicationController
 
   # GET /plants/new
   def new
-    @plant = Plant.new
+    #@plant = Plant.new
+    @plant = current_user_session.plants.build
   end
 
   # GET /plants/1/edit
@@ -21,7 +26,8 @@ class PlantsController < ApplicationController
 
   # POST /plants or /plants.json
   def create
-    @plant = Plant.new(plant_params)
+    #@plant = Plant.new(plant_params)
+    @plant = current_user_session.plants.build(plant_params)
 
     respond_to do |format|
       if @plant.save
@@ -56,6 +62,11 @@ class PlantsController < ApplicationController
     end
   end
 
+  def correct_user
+    @plant = current_user_session.plants.find_by(id: params[:id])
+    #redirect_to_plants_path, notice: "Acesso Negado" if @plant.nil?
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_plant
@@ -64,6 +75,6 @@ class PlantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plant_params
-      params.require(:plant).permit(:plant_id, :plant_name, :water_hour_interval, :fertilizer_hour_interval, :prunning)
+      params.require(:plant).permit(:plant_id, :plant_name, :water_hour_interval, :fertilizer_hour_interval, :prunning, :user_session_id)
     end
 end

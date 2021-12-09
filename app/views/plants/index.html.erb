@@ -15,16 +15,18 @@
 
   <tbody>
     <% @plants.each do |plant| %>
-      <tr>
-        <td><%= plant.plant_id %></td>
-        <td><%= plant.plant_name %></td>
-        <td><%= plant.water_hour_interval %></td>
-        <td><%= plant.fertilizer_hour_interval %></td>
-        <td><%= plant.prunning %></td>
-        <td><%= link_to 'Visualizar', plant %></td>
-        <td><%= link_to 'Editar', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Deletar', plant, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } %></td>
-      </tr>
+      <%if plant.user_session == current_user_session%>
+        <tr>
+          <td><%= plant.plant_id %></td>
+          <td><%= plant.plant_name %></td>
+          <td><%= plant.water_hour_interval %></td>
+          <td><%= plant.fertilizer_hour_interval %></td>
+          <td><%= plant.prunning %></td>
+          <td><%= link_to 'Visualizar', plant %></td>
+          <td><%= link_to 'Editar', edit_plant_path(plant) %></td>
+          <td><%= button_to 'Deletar', plant, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } %></td>
+        </tr>
+        <%end%>
     <% end %>
   </tbody>
 </table>
