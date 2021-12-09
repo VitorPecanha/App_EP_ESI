@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :videos
   get 'home/admin'
   root 'home#admin'
+  
 
 
   devise_for :users
