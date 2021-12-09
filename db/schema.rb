@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_230604) do
+ActiveRecord::Schema.define(version: 2021_12_09_000831) do
 
   create_table "plants", force: :cascade do |t|
     t.integer "plant_id"
@@ -23,12 +23,13 @@ ActiveRecord::Schema.define(version: 2021_11_24_230604) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "user_email"
     t.string "user_first_name"
     t.string "user_last_name"
     t.string "user_cpf"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_email"
+    t.index ["user_email"], name: "index_users_on_user_email", unique: true
   end
 
   create_table "videos", force: :cascade do |t|

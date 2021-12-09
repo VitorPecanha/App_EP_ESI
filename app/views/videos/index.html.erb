@@ -21,8 +21,8 @@
       <td><%= video.provedor %></td>
       <td><%= video.link %></td>
       <td><%= link_to 'Visualizar', video %></td>
-      <td><%= link_to 'Editar', edit_videos_path(video) %></td>
-      <td><%= link_to 'Deletar', video, method: :destroy, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Editar', edit_video_path(video) %></td>
+      <td><%= button_to 'Deletar', video, data: { confirm: 'Are you sure?' } , method: :destroy%></td>
     </tr>
   <% end %>
   </tbody>
