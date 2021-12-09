@@ -12,23 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Id %>
-    <%= form.number_field :plant_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :Nome %>
     <%= form.text_field :plant_name %>
   </div>
 
   <div class="field">
     <%= form.label :Intervalo_de_rega_em_horas %>
-    <%= form.number_field :water_hour_interval %>
+    <%= form.number_field :water_hour_interval, {min: 0} %>
   </div>
 
   <div class="field">
     <%= form.label :Intervalo_de_fertilização_em_horas %>
-    <%= form.number_field :fertilizer_hour_interval %>
+    <%= form.number_field :fertilizer_hour_interval, {min: 0} %>
   </div>
 
   <div class="field">
@@ -36,7 +31,12 @@
     <%= form.check_box :prunning %>
   </div>
 
+  <div class="field">
+    <%= form.number_field :user_session_id, id: :plant_user_session_id, value: current_user_session.id, type: :hidden %>
+  </div>
+  <br>
+
   <div class="actions">
-    <%= form.submit :Cadastrar %>
+    <%= form.submit :Cadastrar, class:"btn btn-success" %>
   </div>
 <% end %>

@@ -2,7 +2,7 @@
 
 <h1>Usuários</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Email</th>
@@ -22,7 +22,7 @@
         <td><%= user.user_cpf %></td>
         <td><%= link_to 'Visualizar', user %></td>
         <td><%= link_to 'Editar', edit_user_path(user) %></td>
-        <td><%= button_to "Deletar", user, data: { confirm: "Are you sure?", disable_with: "Processing..." } , method: :delete %></td>
+        <td><%= button_to 'Deletar', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

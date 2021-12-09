@@ -1,0 +1,18 @@
+<h1>Entrar</h1>
+
+<%= form_with url: sign_in_path do |form| %>
+
+<div class="field">
+    <%= form.label :Email %>
+    <%= form.text_field :user_email %>
+</div>
+
+<div class="field">
+    <%= form.label :Senha %>
+    <%= form.password_field :password %>
+  </div>
+
+<div class="actions">
+    <%= form.submit :Entrar%>
+</div>
+<% end %>
