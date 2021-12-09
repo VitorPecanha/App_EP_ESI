@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :set_user, only: %i[ show edit update destroy ]
+
 
   def index
     @video = Video.all
@@ -13,12 +13,26 @@ class VideosController < ApplicationController
     @video = Video.new
   end
 
-  def create
+  """def create
     @video = Video.new(video_params)
     if @video.save
       redirect_to @video
     else
       render 'new'
+    end
+  end"""
+
+  def create
+    @video = Video.new(video_params)
+
+    respond_to do |format|
+      if @video.save
+        format.html { redirect_to @video, notice: "Video salvo."}
+        format.json { render :show, status: :created, location: @video}
+      else
+        format.html { render :new, status: :unprocessable_entity}
+        format.json { render json: @video.errors, status: :unprocessable_entity}
+      end
     end
   end
 
