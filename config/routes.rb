@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
-  #devise_for
-  resources :user_sessions
+  devise_for :user_sessions
   resources :users
   resources :plants
   resources :videos
