@@ -1,6 +1,7 @@
 class VideosController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
+
   # GET /videos or /videos.json
   def index
     @video = Video.all
