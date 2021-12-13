@@ -1,19 +1,24 @@
+<p id="notice"><%= notice %></p>
+
 <p>
-  <strong>Nome da planta: </strong>
+  <strong>Nome da planta:</strong>
   <%= @video.nome_da_planta %>
 </p>
 
 <p>
-  <strong>Nome do video: </strong>
+  <strong>Nome do video:</strong>
   <%= @video.nome_do_video %>
 </p>
 
 <p>
-  <strong>Provedor: </strong>
+  <strong>Provedor:</strong>
   <%= @video.provedor %>
 </p>
 
 <p>
-  <strong>Link: </strong>
+  <strong>Link:</strong>
   <%= @video.link %>
 </p>
+
+<%= link_to 'Editar', edit_video_path(@video) %> |
+<%= link_to 'Voltar', videos_path %>

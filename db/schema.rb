@@ -13,6 +13,8 @@
 ActiveRecord::Schema.define(version: 2021_12_09_053410) do
 
   create_table "passwords", force: :cascade do |t|
+    t.string "password"
+    t.string "user_email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -56,8 +58,8 @@ ActiveRecord::Schema.define(version: 2021_12_09_053410) do
     t.string "user_cpf"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password"
     t.string "user_email"
+    t.string "password"
     t.index ["user_email"], name: "index_users_on_user_email", unique: true
   end
 

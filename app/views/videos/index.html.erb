@@ -2,7 +2,7 @@
 
 <h1>Videos</h1>
 
-<table>
+<table class="table">
   <thead>
   <tr>
     <th>Nome da planta</th>
@@ -22,7 +22,7 @@
       <td><%= video.link %></td>
       <td><%= link_to 'Visualizar', video %></td>
       <td><%= link_to 'Editar', edit_video_path(video) %></td>
-      <td><%= link_to 'Deletar', video, method: :destroy, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= button_to 'Deletar', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
   </tbody>
