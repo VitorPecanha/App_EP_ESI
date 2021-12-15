@@ -25,5 +25,54 @@
   <%= @plant.prunning %>
 </p>
 
+<p id="registrarRega">
+
+</p>
+<button onclick="registrarRega()">Registrar rega</button>
+
+<p id="registrarFertilização">
+
+</p>
+<button onclick="registrarFertilizacao()">Registrar fertilização</button>
+
+<p id="registrarPoda">
+
+</p>
+<button onclick="registrarPoda()">Registrar poda</button>
+
+<br>
 <%= link_to 'Editar', edit_plant_path(@plant) %> |
 <%= link_to 'Voltar', plants_path %>
+
+<script>
+  function registrarRega(){
+      var data = new Date();
+
+      var hora    = data.getHours();          // 0-23
+      var min     = data.getMinutes();        // 0-59
+      var seg     = data.getSeconds();        // 0-59
+
+      var str_hora = hora + ':' + min + ':' + seg;
+      document.getElementById("registrarRega").innerHTML = "Última rega: "+str_hora;
+  }
+  function registrarFertilizacao(){
+      var data = new Date();
+
+      var hora    = data.getHours();          // 0-23
+      var min     = data.getMinutes();        // 0-59
+      var seg     = data.getSeconds();        // 0-59
+
+      var str_hora = hora + ':' + min + ':' + seg;
+      document.getElementById("registrarFertilização").innerHTML = "Última fertilização: "+str_hora;
+  }
+  function registrarPoda(){
+      var data = new Date();
+
+      var hora    = data.getHours();          // 0-23
+      var min     = data.getMinutes();        // 0-59
+      var seg     = data.getSeconds();        // 0-59
+
+      var str_hora = hora + ':' + min + ':' + seg;
+      document.getElementById("registrarPoda").innerHTML = "Última poda: "+str_hora;
+  }
+</script>
