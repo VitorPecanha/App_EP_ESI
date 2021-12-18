@@ -11,15 +11,15 @@ class SessionsController < ApplicationController
             flash[:alert] = "benis"
         end
         #user = user.find_by(email: params[:email])
-        #password = password.find_by(email: params[:email])
-        #if password.present? && password.authenticate(params[:password])
-            #user = user.find_by(email: params[:email])
-            #session[:user_id] = user.id
-            #redirect_to root_path, notice: "Logged in succesfully"
-        #else
-            #flash[:alert] = "Usuário ou senha inválidos"
-            #render :new
-        #end
+        password = password.find_by(email: params[:email])
+        if password.present? && password.authenticate(params[:password])
+            user = user.find_by(email: params[:email])
+            session[:user_id] = user.id
+            redirect_to root_path, notice: "Logged in succesfully"
+        else
+            flash[:alert] = "Usuário ou senha inválidos"
+            render :new
+        end
     end
     
     def destroy
