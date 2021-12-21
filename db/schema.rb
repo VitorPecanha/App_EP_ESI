@@ -71,6 +71,15 @@ ActiveRecord::Schema.define(version: 2021_12_09_053410) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+  
+  create_table "regas", force: :cascade do |t|
+    t.string "planta_nome"
+    t.integer "dia"
+    t.integer "mes"
+    t.integer "hora"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   add_foreign_key "plants_user_sessions", "plants"
   add_foreign_key "plants_user_sessions", "user_sessions"

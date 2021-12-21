@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><b>Lista de regas</b></h1>
+
+<br>
+
+<div id="regas">
+  <% @regas.each do |rega| %>
+    <%= render rega %>
+    <p>
+      <%= link_to "Show this rega", rega %>
+    </p>
+    <br>
+  <% end %>
+</div>
+
+<%= link_to "Registrar nova rega", new_rega_path %>
