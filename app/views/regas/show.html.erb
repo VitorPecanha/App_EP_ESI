@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rega %>
+
+<div>
+  <%= link_to "Atualizar rega", edit_rega_path(@rega) %> |
+  <%= link_to "Voltar para lista de regas", regas_path %>
+
+  <%= button_to "Apagar registro dessa rega", @rega, method: :delete %>
+</div>

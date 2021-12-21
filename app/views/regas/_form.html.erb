@@ -1,0 +1,37 @@
+<%= form_with(model: rega) do |form| %>
+  <% if rega.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(rega.errors.count, "error") %> prohibited this rega from being saved:</h2>
+
+      <ul>
+        <% rega.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+  <%= form.label "Planta", style: "display: block" %>
+    <%= form.text_field :planta_nome %>
+  </div>
+
+  <div>
+    <%= form.label :dia, style: "display: block" %>
+    <%= form.number_field :dia %>
+  </div>
+
+  <div>
+    <%= form.label "Mês", style: "display: block" %>
+    <%= form.number_field :mes %>
+  </div>
+
+  <div>
+    <%= form.label :hora, style: "display: block" %>
+    <%= form.number_field :hora %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
