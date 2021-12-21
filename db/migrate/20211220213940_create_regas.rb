@@ -1,4 +1,4 @@
-class CreateRegas < ActiveRecord::Migration[7.0]
+class CreateRegas < ActiveRecord::Migration[6.1]
   def change
     create_table :regas do |t|
       t.string :planta_nome

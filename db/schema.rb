@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_09_053410) do
+ActiveRecord::Schema.define(version: 2021_12_20_213940) do
 
   create_table "passwords", force: :cascade do |t|
     t.string "password"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 2021_12_09_053410) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["plant_id"], name: "index_plants_user_sessions_on_plant_id"
     t.index ["user_session_id"], name: "index_plants_user_sessions_on_user_session_id"
+  end
+
+  create_table "regas", force: :cascade do |t|
+    t.string "planta_nome"
+    t.integer "dia"
+    t.integer "mes"
+    t.integer "hora"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "user_sessions", force: :cascade do |t|
@@ -68,15 +77,6 @@ ActiveRecord::Schema.define(version: 2021_12_09_053410) do
     t.string "nome_do_video"
     t.string "provedor"
     t.string "link"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-  
-  create_table "regas", force: :cascade do |t|
-    t.string "planta_nome"
-    t.integer "dia"
-    t.integer "mes"
-    t.integer "hora"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
